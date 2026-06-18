@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Zodiac Match App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+  <div class="dropdown">
+  <img src="menu.png" alt="Menu" class="menu-icon">
+  <div class="dropdown-content">
+    <a href="krios.html"><img src="arieshome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΚΡΙΟΣ</a>
+    <a href="tauros.html"><img src="taurushome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΤΑΥΡΟΣ</a>
+    <a href="didimoi.html"><img src="geminihome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΔΙΔΥΜΟΙ</a>
+    <a href="karkinos.html"><img src="cancerhome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΚΑΡΚΙΝΟΣ</a>
+    <a href="leon.html"><img src="leohome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΛΕΩΝ</a>
+    <a href="parthenos.html"><img src="virgohome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΠΑΡΘΕΝΟΣ</a>
+    <a href="zigos.html"><img src="librahome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΖΥΓΟΣ</a>
+    <a href="skorpios.html"><img src="scorpiohome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΣΚΟΡΠΙΟΣ</a>
+    <a href="toxotis.html"><img src="saggitariushome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΤΟΞΟΤΗΣ</a>
+    <a href="aigokeros.html"><img src="capricornhome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΑΙΓΟΚΕΡΩΣ</a>
+    <a href="idroxoos.html"><img src="aquariushome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΥΔΡΟΧΟΟΣ</a>
+    <a href="ixthies.html"><img src="pisceshome.png" alt="Trulli" width="50" height="30" class="zodiac-icon">ΙΧΘΥΕΣ</a>                                    
+  </div>
+</div>
+  </header>
+
+<h1>🔮 Zodiac Match</h1>
+
+<form id="form">
+  <input type="number" id="age" placeholder="Ηλικία" required>
+
+  <select id="gender">
+    <option value="male">Άντρας</option>
+    <option value="female">Γυναίκα</option>
+  </select>
+
+  <select id="preference">
+    <option value="male">Μου αρέσουν άντρες</option>
+    <option value="female">Μου αρέσουν γυναίκες</option>
+  </select>
+
+  <input type="text" id="zodiac" placeholder="Ζώδιο (π.χ Λέων)">
+  <input type="text" id="ascendant" placeholder="Ωροσκόπος">
+
+  <button type="submit">Find Matches</button>
+</form>
+
+<h2>Αποτελέσματα</h2>
+<div id="results"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

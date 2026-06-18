@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ιχθείς</title>
+    <style>
+    
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #111;
+            color: white;
+            font-family: "Forte";
+            font-size: 16px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            width: 100%;            
+      }
+        .ul1{
+            text-align: left;
+            background: #634768;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid white;
+            box-shadow: 0 20px 20px -15px white;
+        }
+        .img1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 25px; right: 1420px;
+            }
+        .img2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 450px; right: 400px;
+            }
+        .img3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 590px; right: 1130px;
+            }    
+        .img4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 645px; right: 1100px;
+            } 
+        .img5 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 30px; right: 782px;
+            }    
+        .img6 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 20px; right: 50px;
+            }                      
+        .p2{
+            line-height: 1.6;
+            text-align: left;
+            font-family: Courier New  ;
+            font-size: 16px;
+        }  
+        li {
+            margin-bottom: 12px;
+        }  
+        .label{
+            margin-right: 5px;
+            font-weight: bold;
+}
+#main-footer{
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(31, 39, 184, 0.249);
+  color: #fff;
+
+  width:100%;
+
+  padding: 10px 0;
+
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: auto;
+
+}
+
+
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+}
+
+.modal-box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:#fff;
+  color:#000;
+  padding:20px;
+  width:60%;
+  max-width:600px;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+content {
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 0 40px rgba(255,255,255,0.8);
+}
+
+#accessibility-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #0057ff;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+#accessibility-menu{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    z-index: 9999;
+}
+
+#accessibility-menu button{
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: white;
+    color: black;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#accessibility-menu button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Σκούρα αντίθεση */
+
+.dark-contrast{
+    background: black !important;
+    color: white !important;
+}
+
+.dark-contrast *{
+    color: white !important;
+}
+
+/* Λευκή αντίθεση */
+
+.light-contrast{
+    background: white !important;
+    color: black !important;
+}
+
+.light-contrast *{
+    color: black !important;
+}
+
+/* Εξαίρεση για το accessibility menu */
+
+.dark-contrast #accessibility-btn,
+.dark-contrast #accessibility-menu button,
+.light-contrast #accessibility-btn,
+.light-contrast #accessibility-menu button{
+    color: inherit !important;
+}
+
+    </style>
+</head>
+<body>
+    <p>
+        <b><u><div class="img5"><img src="icon9.png" alt="Trulli" width="45" height="25" class="center"></div>Info:</u></b>
+        Οι Ιχθύες (♓) είναι αστρολογικό ζώδιο, το οποίο συνδέεται με τον αστερισμό των Ιχθύων. Σύμφωνα με τον τροπικό ζωδιακό, οι Ιχθύες καταλαμβάνονται<br> από τον Ήλιο 
+        από 19 Φεβρουαρίου μέχρι 20 Μαρτίου. Στον αστρικό ζωδιακό, ο αστερισμός καταλαμβάνεται κατά την <br>περίοδο από 15 Μαρτίου έως 14 Απριλίου. Το ζώδιο απέναντι από τους Ιχθύες είναι ο Παρθένος.
+
+  <a href="zodiac.html"><div class="img6"><img src="homepage.png" alt="Trulli" width="50" height="30" class="center"></a></div>
+
+    </p> <br>
+
+    <h3><center><u>Πιο αναλυτικά τα βασικά χαρακτηριστικά των Ιχθύων:</u></center></h3><br><br>
+
+    <ul class="ul1">
+        <li class="li"><mark class="label">Ημερομηνίες:</mark> 
+        <span>19 Φεβρουαρίου – 20 Μαρτίου</span></li><br>
+
+        <li class="li"><mark class="label">Στοιχείο:</mark> 
+        <span>Νερό (Συναισθηματικός, διαισθητικός, μυστηριώδης)</span></li><br>
+
+        <li class="li"><mark class="label">Ποιότητα:</mark> 
+        <span>Σταθερό (Επιμονή, προσήλωση στους στόχους, αντοχή)</span></li><br>
+
+        <li class="li"><mark class="label">Κυβερνήτης Πλανήτης:</mark> 
+        <span>Πλούτωνας (Συμβολίζει τη μεταμόρφωση, το πάθος, τη δράση και τη δύναμη)</span></li><br>
+        
+        <li class="li"><mark class="label">Αντίθετο Ζώδιο:</mark>
+        <span>Ταύρος</span></li><br>
+
+        <li class="li"><div class="img3"><img src="thumb-up.png" alt="Trulli" width="50" height="30" class="center"></div><mark class="label">Θετικά:</mark> 
+        <span>Αποφασιστικότητα , Αφοσίωση , Πίστη</span></li><br>
+
+        <li class="li"><div class="img4"><img src="thumbs-down.png" alt="Trulli" width="50" height="30" class="center"></div><mark class="label">Αρνητικά:</mark> 
+        <span>Ζήλια , Εκδικητικότητα , Μυστικοπάθεια </span><br><br></li>
+        </ul>
+
+        <div class="img1">
+            <img src="pisces.png" alt="Trulli" width="80" height="50" class="center">
+        </div>
+
+        <div class="img2">
+            <img src="ixtheis2.png" alt="Trulli" width="270" height="135" class="center">
+        </div><br><br>
+
+    <p class="p2">
+        <b><u>Προσωπικότητα και Συμπεριφορά:</u></b>
+        Οι Ιχθύες είναι το πιο διαισθητικό, συμπονετικό και ονειροπόλο ζώδιο του κύκλου. Απορροφούν τα συναισθήματα των άλλων και βάζουν τις ανάγκες των αγαπημένων τους ανθρώπων πάνω από τις δικές τους. 
+        Βλέπουν τον κόσμο όπως θα ήθελαν να είναι, γεγονός που τους κάνει ευάλωτους στην απογοήτευση όταν έρχονται αντιμέτωποι με τη σκληρή πραγματικότητα.Στις ερωτικές τους σχέσεις είναι απελπιστικά ρομαντικοί, 
+        πιστοί και αφοσιωμένοι γεγονός που τους κάνει συντρόφους για οικογένεια. Αναζητούν μια βαθιά, σχεδόν "μεταφυσική" σύνδεση και δεν φοβούνται να δείξουν την ευαλωτότητά τους. Μπορεί να γίνουν αφηρημένοι ή αναποφάσιστοι, καθώς συχνά "χάνονται" 
+        στις σκέψεις τους. Δεν είναι ιδιαίτερα πρακτικοί και προτιμούν να ακολουθούν τη ροή των πραγμάτων παρά να επιβάλλονται.
+    </p><br><br>
+          <footer id="main-footer"><br>
+<a href="#" id="openModal">Πολιτική Cookies</a>            
+            <p><br>Copyright &copy; 2026 ZodiacMatch.gr - All rights reserved<br>
+            Designed & Developed by Ilias</p>
+
+
+<div id="cookieModal" class="modal">
+  <div class="modal-box">
+
+    <span id="closeModal" class="close">&times;</span>
+
+    <h2>Πολιτική Cookies</h2>
+
+    <p>
+Αποθηκεύουμε και/ή έχουμε πρόσβαση σε πληροφορίες, όπως τα cookies και επεξεργαζόμαστε δεδομένα και 
+προσαρμοσμένες πληροφορίες που αποστέλλονται από μια συσκευή για εξατομικευμένες διαφημίσεις και περιεχόμενο, μέτρηση διαφήμισης και περιεχομένου, έρευνα ακροατηρίου και ανάπτυξη υπηρεσιών. 
+Εν γνώση σας ενδέχεται να χρησιμοποιούνται ακριβή δεδομένα γεωγραφικής τοποθεσίας και ταυτοποίησης μέσω σάρωσης συσκευών. Λάβετε υπόψη ότι κάποια επεξεργασία των δεδομένων σας ενδέχεται να μην απαιτεί τη συγκατάθεσή σας, αλλά έχετε 
+το δικαίωμα να εξέλθεται της επεξεργασίας. Οι προτιμήσεις σας θα ισχύουν μόνο για αυτόν τον ιστότοπο και θα αποθηκευτούν για 13 μήνες. Μπορείτε να ακυρώσετε τις 
+προτιμήσεις σας ή να ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή επιστρέφοντας σε αυτόν τον ιστότοπο και κάνοντας κλικ στο κουμπί "Ακύρωση" στο πάνω μέρος της ιστοσελίδας.
+    </p>
+
+  </div>
+</div>
+
+            <script src="cookies.js"></script>
+          </footer>  
+
+<script src="cookiesoroi.js"></script>
+
+<button id="accessibility-btn">♿</button>
+
+<div id="accessibility-menu">
+
+    <button id="fontPlus"
+            onclick="increaseFont()"
+            disabled>
+        A+
+    </button>
+
+    <button id="fontMinus"
+            onclick="decreaseFont()"
+            disabled>
+        A-
+    </button>
+
+    <button onclick="toggleImages()">
+        🖼️ Εικόνες
+    </button>
+
+    <button onclick="toggleDarkContrast()">
+        🌙 Σκούρo
+    </button>
+
+    <button onclick="toggleLightContrast()">
+        ☀️ Φωτεινό
+    </button>
+
+    <button onclick="resetAccessibility()">
+        🔄 Reset
+    </button>
+
+</div>
+
+<script src="accesible_menu.js"></script>
+
+</body>
+</html>  

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #111;
+    color: white;
+  }
+  
+  input, select, button {
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    background: #634768;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+
+.topbar {
+  position: relative;
+  height: 60px;
+}
+
+.dropdown {
+  position: fixed;
+  top: 100px;
+  left: 55px;
+  z-index: 1000;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #222;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+}
+
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+        .img1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute; top: 15px; right: 1420px;
+            }
+.zodiac-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.modal-text iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+.modal-text{
+  margin-top:20px;
+  height:320px;
+  overflow:hidden;
+}
+
+.modal-buttons{
+  margin-top:20px;
+  text-align:right;
+}
+
+.modal-buttons button{
+  padding:10px 20px;
+  margin-left:10px;
+  cursor:pointer;
+}

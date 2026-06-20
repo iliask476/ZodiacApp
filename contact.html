@@ -16,19 +16,180 @@
     <title>Επικοινωνία | ZodiacApp</title>
     <style>       
      body {
-         font-family: Arial;
-         text-align: center;
-         background: #111;
-         color: white;
-         font-family: "Forte";
-         font-size: 16px;
-         min-height: 100vh;
-         display: flex;
-         flex-direction: column;
-         margin: 0;
-         padding: 0;
-         width: 100%; 
-      }</style>
+            font-family: Arial;
+            text-align: center;
+            background: #111;
+            color: white;
+            font-family: "Forte";
+            font-size: 16px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            width: 100%; 
+      }   
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 32px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.stars span {
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.stars span.active {
+  color: gold;
+}
+
+.stars span:hover {
+  transform: scale(1.2);
+}
+.p{
+            line-height: 1.6;
+            text-align: center;
+            font-family: Courier New  ;
+            font-size: 16px;
+        } 
+
+ #main-footer{
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(31, 39, 184, 0.249);
+  color: #fff;
+
+  width:100%;
+
+  padding: 10px 0;
+
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+}
+
+.modal-box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:#fff;
+  color:#000;
+  padding:20px;
+  width:60%;
+  max-width:600px;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+content {
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 0 40px rgba(255,255,255,0.8);
+}
+
+
+#accessibility-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #0057ff;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+#accessibility-menu{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    z-index: 9999;
+}
+
+#accessibility-menu button{
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: white;
+    color: black;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#accessibility-menu button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Σκούρα αντίθεση */
+
+.dark-contrast{
+    background: black !important;
+    color: white !important;
+}
+
+.dark-contrast *{
+    color: white !important;
+}
+
+/* Λευκή αντίθεση */
+
+.light-contrast{
+    background: white !important;
+    color: black !important;
+}
+
+.light-contrast *{
+    color: black !important;
+}
+
+/* Εξαίρεση για το accessibility menu */
+
+.dark-contrast #accessibility-btn,
+.dark-contrast #accessibility-menu button,
+.light-contrast #accessibility-btn,
+.light-contrast #accessibility-menu button{
+    color: inherit !important;
+}        
+      </style>
       
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="7c91a6bc-8365-4667-8a45-4a21c6877540" data-blockingmode="auto" type="text/javascript"></script>      
       
@@ -38,18 +199,119 @@
 </head>
 <body>
 
-    <h1>Επικοινωνία</h1>
+<h1>Επικοινωνία</h1>
 
+<p class="p">Για οτιδήποτε χρειάζεστε, μπορείτε να επικοινωνήσετε μαζί μας, συμπληρώνοντας τα <br> στοιχεία που απαιτούνται στη φόρμα που βρίσκεται παρακάτω.<br>
+
+Θα προσπαθήσουμε να σας απαντήσουμε μέσα σε ένα 24ωρο από την ώρα παραλαβής του μηνύματός σας.<br> Επίσης , θα μας χαροποιούσε ιδιαίτερα να αφήσετε την βαθμολογία
+σας καθώς μας βοηθάει να γινόμαστε καλύτεροι.<br><br>
+
+Σας ευχαριστούμε.</p><br><br>
+
+<form action="https://formspree.io/f/maqgwnvb" method="POST">
+
+    <label>Όνομα:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Σχόλια:</label><br>
+    <textarea name="message" rows="5" required></textarea><br><br>
+
+    <label>Βαθμολογία:</label><br>
+
+<div class="stars" id="stars">
+  <span data-value="1">☆</span>
+  <span data-value="2">☆</span>
+  <span data-value="3">☆</span>
+  <span data-value="4">☆</span>
+  <span data-value="5">☆</span>
+</div>
+
+<input type="hidden" id="rating" name="rating" value="0">
+
+    <br><br>
+
+    <button type="submit">Αποστολή</button>
+
+</form>
+
+<br>
+
+<a href="index.html">Επιστροφή στην αρχική</a>     <br><br>
+
+<script src="starsrating.js"></script>
+
+
+          <footer id="main-footer"><br>
+
+    <a href="privacy-policy.html">Πολιτική Απορρήτου</a>
+
+<a href="#" id="openModal">Πολιτική Cookies</a>            
+            <p><br>Copyright &copy; 2026 Zodiacapp.site - All rights reserved<br>
+            Designed & Developed by Ilias</p>
+
+
+<div id="cookieModal" class="modal">
+  <div class="modal-box">
+
+    <span id="closeModal" class="close">&times;</span>
+
+    <h2>Πολιτική Cookies</h2>
     <p>
-        Αν θέλετε να επικοινωνήσετε με το ZodiacApp για προτάσεις,
-        σχόλια ή διορθώσεις, μπορείτε να στείλετε email:
+Αποθηκεύουμε και/ή έχουμε πρόσβαση σε πληροφορίες, όπως τα cookies και επεξεργαζόμαστε δεδομένα και 
+προσαρμοσμένες πληροφορίες που αποστέλλονται από μια συσκευή για εξατομικευμένες διαφημίσεις και περιεχόμενο, μέτρηση διαφήμισης και περιεχομένου, έρευνα ακροατηρίου και ανάπτυξη υπηρεσιών. 
+Εν γνώση σας ενδέχεται να χρησιμοποιούνται ακριβή δεδομένα γεωγραφικής τοποθεσίας και ταυτοποίησης μέσω σάρωσης συσκευών. Λάβετε υπόψη ότι κάποια επεξεργασία των δεδομένων σας ενδέχεται να μην απαιτεί τη συγκατάθεσή σας, αλλά έχετε 
+το δικαίωμα να εξέλθεται της επεξεργασίας. Οι προτιμήσεις σας θα ισχύουν μόνο για αυτόν τον ιστότοπο και θα αποθηκευτούν για 13 μήνες. Μπορείτε να ακυρώσετε τις 
+προτιμήσεις σας ή να ανακαλέσετε τη συγκατάθεσή σας ανά πάσα στιγμή επιστρέφοντας σε αυτόν τον ιστότοπο και κάνοντας κλικ στο κουμπί "Ακύρωση" στο πάνω μέρος της ιστοσελίδας.
     </p>
 
-    <p>
-        <strong>web03dev@gmail.com</strong>
-    </p>
+  </div>
+</div>
 
-    <a href="index.html">Επιστροφή στην αρχική</a>
+
+
+            <script src="cookies.js"></script>
+          </footer>  
+
+<script src="cookiesoroi.js"></script>    
+    
+
+
+
+<button id="accessibility-btn">♿</button>
+
+<div id="accessibility-menu">
+
+    <button id="fontPlus"
+            onclick="increaseFont()"
+            disabled>
+        A+
+    </button>
+
+    <button id="fontMinus"
+            onclick="decreaseFont()"
+            disabled>
+        A-
+    </button>
+
+    <button onclick="toggleImages()">
+        🖼️ Εικόνες
+    </button>
+
+    <button onclick="toggleDarkContrast()">
+        🌙 Σκούρo
+    </button>
+
+    <button onclick="toggleLightContrast()">
+        ☀️ Φωτεινό
+    </button>
+
+    <button onclick="resetAccessibility()">
+        🔄 Reset
+    </button>
+
+</div>
+
+<script src="accesible_menu.js"></script>
 
 </body>
 </html>

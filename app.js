@@ -107,14 +107,15 @@ function calculateMatch(user) {
   // 4 συμβατά ζώδια
   // 2 συμβατές ηλικιακές ομάδες
   // 1 ωροσκόπος
-  const maxScore = 7;
+  const maxScore = 8;
 
   const currentScore =
     zodiacMatches.length +
     compatibleAgeGroups.length +
     (user.ascendant ? 1 : 0);
 
-  const score = Math.round((currentScore / maxScore) * 100);
+  const score =
+    Math.floor(Math.random() * 31) + 70;
 
   return {
     zodiacMatches,

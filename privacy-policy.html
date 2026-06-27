@@ -22,7 +22,7 @@
      body {
             font-family: Arial;
             text-align: center;
-            background: #111;
+            background: #000000;
             color: white;
             font-family: "Forte";
             font-size: 16px;
@@ -172,7 +172,97 @@ content {
 .light-contrast #accessibility-btn,
 .light-contrast #accessibility-menu button{
     color: inherit !important;
-}      
+} 
+
+
+a {
+    color: rgb(101, 100, 188);
+    text-decoration: none
+}
+
+a:visited {
+    color: rgb(101, 100, 188);
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+}
+
+
+body{
+    margin:0;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:3px;
+
+    background:#333;
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    z-index:1000;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+}
+
+.navbar a{
+    display:flex;
+    align-items:center;
+    gap:5px;
+
+    color:#f2f2f2;
+    text-decoration:none;
+    font-size:14px;
+    font-family:"Forte", cursive;   /* ίδια γραμματοσειρά με το Home */
+    font-weight:bold;
+
+    padding:10px 6px;   
+    white-space:nowrap;
+
+}
+
+.navbar a:hover{
+    background:#ddd;
+    color:black;
+    border-radius:5px;
+}
+
+.zodiac-icon{
+    width:16px;
+    height:16px;
+    margin-right:2px;
+    object-fit:contain;
+    vertical-align:middle;
+}
+
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .navbar a{
+        font-size:14px;
+        padding:5px;
+    }
+
+    .zodiac-icon{
+        width:18px;
+        height:18px;
+    }
+}
       
       
       </style>
@@ -182,6 +272,56 @@ content {
 
 </head>
 <body>
+
+<div class="navbar">
+
+  <a href="index.html">ΑΡΧΙΚΗ</a>
+
+  <a href="krios.html">
+      <img src="arieshome.png" class="zodiac-icon">
+      ΚΡΙΟΣ
+  </a>
+
+  <a href="tauros.html">
+      <img src="taurushome.png" class="zodiac-icon">
+      ΤΑΥΡΟΣ
+  </a>
+
+  <a href="didimoi.html">
+      <img src="geminihome.png" class="zodiac-icon">
+      ΔΙΔΥΜΟΙ
+  </a>
+    <a href="karkinos.html">
+      <img src="cancerhome.png" class="zodiac-icon">ΚΑΡΚΙΝΟΣ
+    </a>
+    <a href="leon.html">
+      <img src="leohome.png" class="zodiac-icon">ΛΕΩΝ
+    </a>
+    <a href="parthenos.html">
+      <img src="virgohome.png" class="zodiac-icon">ΠΑΡΘΕΝΟΣ
+    </a>
+    <a href="zigos.html">
+      <img src="librahome.png" class="zodiac-icon">ΖΥΓΟΣ
+    </a>
+    <a href="skorpios.html">
+      <img src="scorpiohome.png" class="zodiac-icon">ΣΚΟΡΠΙΟΣ
+    </a>
+    <a href="toxotis.html">
+      <img src="saggitariushome.png" class="zodiac-icon">ΤΟΞΟΤΗΣ
+    </a>
+    <a href="aigokeros.html">
+      <img src="capricornhome.png" class="zodiac-icon">ΑΙΓΟΚΕΡΩΣ
+    </a>
+    <a href="idroxoos.html">
+      <img src="aquariushome.png" class="zodiac-icon">ΥΔΡΟΧΟΟΣ
+    </a>
+    <a href="ixthies.html">
+      <img src="pisceshome.png" class="zodiac-icon">ΙΧΘΥΕΣ
+    </a>  
+  <a href="arithmologia1_9.html">ΑΡΙΘΜΟΛΟΓΙΑ</a>
+
+</div>  <br><br><br>
+
 
     <h1>Πολιτική Απορρήτου</h1>
 
@@ -205,9 +345,7 @@ content {
     <p>
         Για οποιαδήποτε απορία σχετικά με την πολιτική απορρήτου,
         μπορείτε να επικοινωνήσετε μέσω της σελίδας επικοινωνίας.
-    </p><br><br>
-
-    <a href="index.html">Επιστροφή στην αρχική</a> <br><br>
+    </p><br><br> <br><br>
 
 
 
@@ -216,7 +354,7 @@ content {
     <a href="contact.html">Επικοινωνία</a>
 
 <a href="#" id="openModal">Πολιτική Cookies</a>            
-            <p><br>Copyright &copy; 2026 Zodiacapp.site - All rights reserved<br>
+            <p><br>Copyright &copy; 2026 <a href="index.html">Zodiacapp.site</a> - All rights reserved<br>
             Designed & Developed by Ilias</p>
 
 

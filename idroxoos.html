@@ -24,7 +24,7 @@
         body {
             font-family: Arial;
             text-align: center;
-            background: #000000;
+            background: #392a5a;
             color: white;
             font-family: "Forte";
             font-size: 16px;
@@ -47,13 +47,19 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            position: absolute; top: 90px; right: 1420px;
+            position: absolute; top:13%; left:2%;
+
+    max-width: 100%;
+    height: auto;            
             }
         .img2 {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            position: absolute; top: 470px; right: 400px;
+            position: absolute; top: 70%; right: 25%;
+
+    max-width: 100%;
+    height: auto;               
             }
         .p2{
             line-height: 1.6;
@@ -65,13 +71,19 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            position: absolute; top: 620px; right: 1068px;
+            position: absolute; top: 80%; right: 35%;
+
+    max-width: 100%;
+    height: auto;            
             }    
         .img4 {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            position: absolute; top: 677px; right: 1006px;
+            position: absolute; top: 102%; right: 63%;
+
+    max-width: 100%;
+    height: auto;            
             }                    
         li {
             margin-bottom: 12px;
@@ -284,22 +296,62 @@ body{
 }
 
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
     .navbar{
-        flex-wrap:wrap;
-        justify-content:center;
+        display:flex;
+        overflow-x:auto;
+        white-space:nowrap;
+        scrollbar-width:none;
+    }
+
+    .navbar::-webkit-scrollbar{
+        display:none;
     }
 
     .navbar a{
-        font-size:14px;
-        padding:5px;
+        flex:0 0 auto;
+        font-size:12px;
+        padding:10px 8px;
     }
 
-    .zodiac-icon{
-        width:18px;
-        height:18px;
+    .navbar img{
+        width:20px;
+        vertical-align:middle;
     }
+}
+
+@media screen and (max-width:768px){
+
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6{
+        position:static !important;
+        display:block;
+        margin:20px auto;
+        text-align:center;
+    }
+
+    .img1 img,
+    .img2 img,
+    .img3 img,
+    .img4 img,
+    .img5 img,
+    .img6 img{
+        max-width:90%;
+        height:auto;
+    }
+}
+
+
+
+.thumb-icon{
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 8px;
 }
 
     </style>
@@ -386,11 +438,14 @@ body{
         <li class="li"><mark class="label">Αντίθετο Ζώδιο:</mark>
         <span>Παρθένος</span><br><br></li>
 
-        <li class="li"><div class="img3"><img src="thumb-up.png" alt="Trulli" width="50" height="30" class="center"></div><mark class="label">Θετικά:</mark> 
-        <span>Ενσυναίσθηση , Δημιουργικοί , Προσαρμοστικοί </span><br><br></li>
+        <li class="li">
+        <mark class="label">Θετικά:</mark> 
+        Ενσυναίσθηση , Δημιουργικοί , Προσαρμοστικοί<img src="thumb-up.png" width="32" class="thumb-icon">
+<br><br></li>
 
-        <li class="li"><div class="img4"><img src="thumbs-down.png" alt="Trulli" width="50" height="30" class="center"></div><mark class="label">Αρνητικά:</mark> 
-        <span>Τάσεις Φυγής , Υπερευαισθησία , Αναποφασιστικότητα</span><br><br></li>
+        <li class="li">
+        <mark class="label">Αρνητικά:</mark> 
+        Τάσεις Φυγής , Υπερευαισθησία , Αναποφασιστικότητα<img src="thumbs-down.png" width="32" class="thumb-icon""><br><br></li>
         </ul>
 
         <div class="img1">

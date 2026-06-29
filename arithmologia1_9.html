@@ -282,21 +282,28 @@ body{
 }
 
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
     .navbar{
-        flex-wrap:wrap;
-        justify-content:center;
+        display:flex;
+        overflow-x:auto;
+        white-space:nowrap;
+        scrollbar-width:none;
+    }
+
+    .navbar::-webkit-scrollbar{
+        display:none;
     }
 
     .navbar a{
-        font-size:14px;
-        padding:5px;
+        flex:0 0 auto;
+        font-size:12px;
+        padding:10px 8px;
     }
 
-    .zodiac-icon{
-        width:18px;
-        height:18px;
+    .navbar img{
+        width:20px;
+        vertical-align:middle;
     }
 }
 

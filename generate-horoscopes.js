@@ -64,14 +64,17 @@ async function generate(sign) {
         signs: {}
     };
 
-    for(const sign of signs){
-        console.log(sign);
-        result.signs[sign] =
-            await generate(sign);
+    for (const sign of signs) {
+        console.log("Generating:", sign);
+        result.signs[sign] = await generate(sign);
     }
+
+    console.log(JSON.stringify(result, null, 2));
 
     fs.writeFileSync(
         "horoscopes.json",
         JSON.stringify(result, null, 2)
     );
+
+    console.log("File written successfully");
 })();

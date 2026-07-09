@@ -1,3 +1,20 @@
+const fs = require('fs');
+
+const signs = [
+  "Κριός",
+  "Ταύρος",
+  "Δίδυμοι",
+  "Καρκίνος",
+  "Λέων",
+  "Παρθένος",
+  "Ζυγός",
+  "Σκορπιός",
+  "Τοξότης",
+  "Αιγόκερως",
+  "Υδροχόος",
+  "Ιχθύες"
+];
+
 async function generate(sign) {
 
     const response = await fetch(
@@ -37,11 +54,6 @@ async function generate(sign) {
 
     const data = await response.json();
 
-    if (!response.ok) {
-        console.log(data);
-        throw new Error("Groq API error");
-    }
-
     return data.choices[0].message.content;
 }
 
@@ -52,16 +64,14 @@ async function generate(sign) {
         signs: {}
     };
 
-    for (const sign of signs) {
-        console.log("Generating:", sign);
-        result.signs[sign] = await generate(sign);
+    for(const sign of signs){
+        console.log(sign);
+        result.signs[sign] =
+            await generate(sign);
     }
 
     fs.writeFileSync(
         "horoscopes.json",
         JSON.stringify(result, null, 2)
     );
-
-    console.log("Horoscopes generated successfully!");
-
 })();

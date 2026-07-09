@@ -44,3 +44,24 @@ async function generate(sign) {
 
     return data.choices[0].message.content;
 }
+
+(async () => {
+
+    const result = {
+        date: new Date().toISOString(),
+        signs: {}
+    };
+
+    for (const sign of signs) {
+        console.log("Generating:", sign);
+        result.signs[sign] = await generate(sign);
+    }
+
+    fs.writeFileSync(
+        "horoscopes.json",
+        JSON.stringify(result, null, 2)
+    );
+
+    console.log("Horoscopes generated successfully!");
+
+})();

@@ -34,7 +34,7 @@ async function generate(sign) {
                     },
                     body: JSON.stringify({
                         model: "llama-3.3-70b-versatile",
-                        temperature: 0.7,
+                        temperature: 0.4,
                         messages: [
                             {
                                 role: "system",
@@ -82,6 +82,10 @@ async function generate(sign) {
 
 
             const text = data.choices[0].message.content;
+            const cleanedText = text.replace(
+    /[A-Za-z\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF]/g,
+    ""
+);return cleanedText;
 
 
             // Έλεγχος για αγγλικά, κινέζικα, ιαπωνικά, κορεάτικα
@@ -91,19 +95,21 @@ const hasForeign =
     );
 
 
-            if (hasForeign) {
-                console.log(
-                    `Προσπάθεια ${attempt}: Βρέθηκαν ξένοι χαρακτήρες για ${sign}`
-                );
+if (hasForeign) {
+    console.log(
+        `Προσπάθεια ${attempt}: Βρέθηκαν ξένοι χαρακτήρες για ${sign}`
+    );
 
-                if (attempt === maxAttempts) {
-                    throw new Error(
-                        `Δεν δημιουργήθηκε καθαρό ελληνικό κείμενο για ${sign}`
-                    );
-                }
+    if (attempt === maxAttempts) {
+        console.log(
+            `Χρησιμοποιείται η τελευταία απάντηση για ${sign}`
+        );
 
-                continue;
-            }
+        return text;
+    }
+
+    continue;
+}
 
 
             return text;

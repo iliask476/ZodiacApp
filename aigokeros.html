@@ -111,6 +111,30 @@
   box-sizing: border-box;
   margin-top: auto;
 } 
+
+
+.footer-top{
+    position: relative;
+    width:100%;
+    min-height:40px;
+}
+
+.footer-left{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.footer-center{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+
+
 .modal{
   display:none;
   position:fixed;
@@ -303,6 +327,27 @@ body{
 
 @media screen and (max-width:768px){
 
+        .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .daily-link {
+        margin-right: 0;
+    }
+
+
+    .footer-left{
+        position:static;
+        transform:none;
+        text-align:center;
+        margin-bottom:15px;
+    }
+
+    .footer-center{
+        justify-content:center;
+    }
+
     .navbar{
         display:flex;
         overflow-x:auto;
@@ -328,6 +373,27 @@ body{
 
 
 @media screen and (max-width:768px){
+
+            .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .daily-link {
+        margin-right: 0;
+    }
+
+
+    .footer-left{
+        position:static;
+        transform:none;
+        text-align:center;
+        margin-bottom:15px;
+    }
+
+    .footer-center{
+        justify-content:center;
+    }
 
     .img1,
     .img2,
@@ -583,10 +649,23 @@ body{
 
           <footer id="main-footer"><br> 
 
-    <a href="privacy-policy.html">Πολιτική Απορρήτου</a>
-    <a href="contact.html">Επικοινωνία</a>           
-            
-<a href="#" id="openModal">Πολιτική Cookies</a>            
+<div class="footer-top">
+
+    <div class="footer-left">
+            <h4>✨Μήπως σήμερα είναι η τυχερή σου μέρα;</h4>
+        <a href="aigokeros-imerisia.html" class="daily-link">
+            Δες την ημερήσια πρόβλεψη του Αιγόκερου
+        </a>
+    </div>
+
+    <div class="footer-center">
+        <a href="privacy-policy.html">Πολιτική Απορρήτου</a>
+        <a href="contact.html">Επικοινωνία</a>
+        <a href="#" id="openModal">Πολιτική Cookies</a>
+    </div>
+
+</div>
+
             <p><br>Copyright &copy; 2026 <a href="index.html">Zodiacapp.site</a> - All rights reserved<br>
             Designed & Developed by Ilias</p>
 

@@ -10,52 +10,112 @@
     <loc>https://zodiacapp.site/krios.html</loc>
   </url>
 
+   <url>
+    <loc>https://zodiacapp.site/krios-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url> 
+
   <url>
-    <loc>https://zodiacapp.site/tavros.html</loc>
+    <loc>https://zodiacapp.site/tauros.html</loc>
   </url>
+
+  <url>
+    <loc>https://zodiacapp.site/tauros-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
 
   <url>
     <loc>https://zodiacapp.site/didymoi.html</loc>
   </url>
 
   <url>
+    <loc>https://zodiacapp.site/didymoi-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
     <loc>https://zodiacapp.site/karkinos.html</loc>
   </url>
+
+  <url>
+    <loc>https://zodiacapp.site/karkinos-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
 
   <url>
     <loc>https://zodiacapp.site/leon.html</loc>
   </url>
 
   <url>
+    <loc>https://zodiacapp.site/leon-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
     <loc>https://zodiacapp.site/parthenos.html</loc>
   </url>
 
   <url>
-    <loc>https://zodiacapp.site/zygos.html</loc>
+    <loc>https://zodiacapp.site/parthenos-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
+    <loc>https://zodiacapp.site/zigos.html</loc>
   </url>
+
+  <url>
+    <loc>https://zodiacapp.site/zigos-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
 
   <url>
     <loc>https://zodiacapp.site/skorpios.html</loc>
   </url>
 
   <url>
+    <loc>https://zodiacapp.site/skorpios-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
     <loc>https://zodiacapp.site/toxotis.html</loc>
   </url>
+
+  <url>
+    <loc>https://zodiacapp.site/toxotis-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
 
   <url>
     <loc>https://zodiacapp.site/aigokeros.html</loc>
   </url>
 
   <url>
-    <loc>https://zodiacapp.site/ydrohoos.html</loc>
+    <loc>https://zodiacapp.site/aigokeros-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
+    <loc>https://zodiacapp.site/idroxoos.html</loc>
   </url>
 
   <url>
-    <loc>https://zodiacapp.site/ixthyes.html</loc>
+    <loc>https://zodiacapp.site/idroxoos-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
+    <loc>https://zodiacapp.site/ixthies.html</loc>
   </url>
 
   <url>
-    <loc>https://zodiacapp.site/arithmologia.html</loc>
+    <loc>https://zodiacapp.site/ixthies-imerisia.html</loc>
+    <lastmod>2026-07-15</lastmod>
+  </url>  
+
+  <url>
+    <loc>https://zodiacapp.site/arithmologia1_9.html</loc>
   </url>
 
   <url>
@@ -63,7 +123,11 @@
   </url>
 
   <url>
-    <loc>https://zodiacapp.site/privacy.html</loc>
+    <loc>https://zodiacapp.site/privacy-policy.html</loc>
   </url>
+
+  <url>
+    <loc>https://zodiacapp.site/11_22_33.html</loc>
+  </url>  
 
 </urlset>

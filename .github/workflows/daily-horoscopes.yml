@@ -28,7 +28,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          git add horoscopes.json
+          git add horoscopes.json sitemap.xml
 
           git diff --staged --quiet || \
           git commit -m "🔮 Daily horoscope"

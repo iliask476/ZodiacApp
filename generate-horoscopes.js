@@ -148,5 +148,50 @@ if (hasForeign) {
         JSON.stringify(result, null, 2)
     );
 
+
+// ---------------------
+// Ενημέρωση sitemap.xml
+// ---------------------
+
+const today = new Date().toISOString().split("T")[0];
+
+let sitemap = fs.readFileSync("sitemap.xml", "utf8");
+
+const pages = [
+    "krios-imerisia.html",
+    "tauros-imerisia.html",
+    "didymoi-imerisia.html",
+    "karkinos-imerisia.html",
+    "leon-imerisia.html",
+    "parthenos-imerisia.html",
+    "zigos-imerisia.html",
+    "skorpios-imerisia.html",
+    "toxotis-imerisia.html",
+    "aigokeros-imerisia.html",
+    "idroxoos-imerisia.html",
+    "ixthies-imerisia.html"
+];
+
+for (const page of pages) {
+
+    const regex = new RegExp(
+        `<loc>https://zodiacapp.site/${page}</loc>(\\s*<lastmod>.*?<\\/lastmod>)?`,
+        "g"
+    );
+
+    sitemap = sitemap.replace(
+        regex,
+        `<loc>https://zodiacapp.site/${page}</loc>\n    <lastmod>${today}</lastmod>`
+    );
+}
+
+fs.writeFileSync("sitemap.xml", sitemap);
+
+console.log("Sitemap updated.");
+
+
+
+
+
     console.log("File written successfully");
 })();

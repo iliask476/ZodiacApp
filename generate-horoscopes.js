@@ -44,7 +44,9 @@ async function generate(sign) {
 
                         temperature: 0.4,
 
-                        max_completion_tokens: 1400,
+                            max_completion_tokens: 3500,
+
+                            reasoning_effort: "low",
 
                         messages: [
                             {
